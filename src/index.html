@@ -3,25 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/output.css">
+    <script src="/src/data.json"></script>
     <title>Document</title>
 </head>
-<body>
-    <main>
-        <section>
-            <article>
-                <div>
-                    <figure>
-                        <img src="" alt="">
-                    </figure>
-                    <button></button>
+<body class="bg-primary">
+    <main class="w-[85vw] m-auto">
+        <h1 class="text-5xl font-title my-7">Desserts</h1>
+        <section class="w-full mx-2 my-6 h-auto p-1 flex justify-around container-padre">
+        <div class="listProduct w-full flex  flex-wrap "">
+            <div class="itemProduct w-1/6 p-3 mx-4">
+                <figure class="w-full rounded-md">
+                    <img class="w-auto rounded-md" src="/assets/images/image-waffle-desktop.jpg" alt="">
+                </figure>
+                <button class="btn-add w-auto m-auto px-8 py-2 rounded-full my-3 bg-white flex text-center font-text-md border border-orange-700">
+                    <img class="mr-3 my-auto" src="/assets/images/icon-add-to-cart.svg" alt="">
+                    Add to cart
+                </button>
+                <button class=" btn  my-3 btn-add w-auto m-auto px-6 py-2 rounded-full items-center text-white justify-between bg-orange-700 flex text-center font-text-md">
+                    <img class="w-4 mr-10" src="/assets/images/icon-increment-quantity.svg" alt="">
+                    <span>0</span>
+                    <img class="w-4 ml-10" src="/assets/images/icon-decrement-quantity.svg" alt="">
+                </button>
+                <div class="itemInfo">
+                    <h3 class="font-subtitle text-md my-3 text-gray-500">Category</h3>
+                    <h2 class="font-title my-3 text-xl">Product name</h2>
+                    <p class="font-text-md my-3 text-orange-600 text-md">Price $6.50</p>
                 </div>
-                <div class="info">
-                    <h3></h3>
-                    <h2></h2>
-                    <p></p>
-                </div>
-            </article>
+            </div>
+        </div>    
+          <div class="cardTab w-1/4 hidden">
+            <h1 class="font-title text-xl text-orange-600">Tu carrito <span class="listCartTotal"></span></h1>
+            <div class="listCart">
+              
+            </div>
+            <div class="listCartOrder flex justify-between">
+                <h2 class="font-subtitle">Order total</h2>
+                <span class="orderTotal">0</span>
+            </div>
+            
+            <div class="flex flex-col gap-5 justify-center mt-8">
+
+                <button class="btnConfirm w-full bg-orange-700 mx-auto font-text-md px-4 py-2 text-white rounded-full"> Confirm Order</button>
+                <button class="btnCloseCard w-full border-2 border-orange-600 mx-auto font-text-md px-4 py-2  rounded-full"> Close</button>
+            </div>
+
+          </div>
+            
         </section>
     </main>
+    <script src="/src/index.js"></script>
 </body>
 </html>
